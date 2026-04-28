@@ -3,6 +3,7 @@ import { z } from "zod";
 export const Chain = {
   TON: "ton",
   BASE: "base",
+  POLYGON: "polygon",
 } as const;
 
 export type Chain = (typeof Chain)[keyof typeof Chain];
@@ -22,5 +23,9 @@ export const CHAIN_METADATA: Record<Chain, ChainMetadata> = {
   [Chain.BASE]: {
     label: "BASE",
     imageUrl: "https://assets.coingecko.com/asset_platforms/images/131/small/base.png",
+  },
+  [Chain.POLYGON]: {
+    label: "POLYGON",
+    imageUrl: "https://assets.coingecko.com/asset_platforms/images/15/small/polygon_pos.png",
   },
 };

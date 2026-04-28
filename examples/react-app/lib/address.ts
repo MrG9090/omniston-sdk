@@ -11,6 +11,9 @@ export function isValidAddress(chain: `${Chain}` | (string & {}), src: string) {
     case Chain.BASE: {
       return isErc20Address(src);
     }
+    case Chain.POLYGON: {
+      return isErc20Address(src);
+    }
     default: {
       throw new Error(`Unexpected chain: ${chain}`);
     }
